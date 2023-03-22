@@ -1,0 +1,15 @@
+{% extends 'mainCookHelper/base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    {% for post in posts %}
+        <div class="posts">
+            <h1><a href="{% url 'recept_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>Дата создания рецепта: {{ post.published_date }}</p>
+            <p>Автор: {{post.author}}</p>
+            <br>
+            <p>{{ post.annotation|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

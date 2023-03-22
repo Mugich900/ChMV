@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+}
+  
+body{
+    background-color: #f3f3f3;
+}
+
+footer{
+    background-color: #fcfcfc;
+}
+
+a {
+    color: #f8770d;
+    text-decoration: none;
+}
+
+.menu {
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0; 
+    margin-left: 15px;
+    padding-left: 0; 
+}
+
+li {
+    display:inline-block;
+    padding-right: 15px;
+    padding-top: 13px;
+}
+
+.li_right{
+    float: right;
+    margin-right: 15px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.posts{
+    margin-top: 15px;
+    margin-left: 25%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 150px);
+}
+
+.post_info{
+    margin-left: 5%;
+}
+
+.post_function{
+    margin-left: 75%;
+}
+
+.block_post{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 20px);
+}
+
+.post{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.post h1{
+    font-size: 40px;
+}
+
+.post_text{
+    font-size: 20px;
+    min-width: 50%;
+    max-width: 100%;
+}
+
+.forms{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.login_form{
+    margin-top: 8%;
+    margin-left: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.login_form button{
+    font-size: 17px;
+}
+
+.login_form h2{
+    font-size: 50px;
+}
+
+
+.reg_form{
+    margin-top: 8%;
+    margin-left: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.reg_form button{
+    font-size: 17px;
+}
+
+.reg_form h2{
+    font-size: 50px;
+}

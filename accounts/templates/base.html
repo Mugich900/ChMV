@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>CookHelper</title>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Главная</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'recept_new' %}">Создать публикацию</a></li>
+                <li class="li_right"><a href="{% url 'logout' %}">Выход</a></li>
+            {%else%}
+                <li class="li_right"><a href="{% url 'login'%}">Войти</a></li>
+            {%endif%}
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+<footer>
+    
+</footer>
+</html>

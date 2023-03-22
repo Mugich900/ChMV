@@ -1,0 +1,29 @@
+{% extends 'mainCookHelper/base.html' %}
+
+{% block content %}
+<div class="block_post">
+    <div class="post_info">
+        {% if post.published_date %}
+            <p>Дата создания рецепта: {{ post.published_date }}</p>
+            <p>Автор: {{post.author}}</p>
+        {% endif %}
+    </div>
+    <div class="post_function">
+        {% if user.is_authenticated %}
+            {% if request.user == post.author or user.is_superuser%}
+                <a href="{% url 'recept_edit' pk=post.pk %}">Редактировать</a>
+                <br>
+                <a href="{% url 'recept_delete' pk=post.pk %}">Удалить рецепт</a>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+<div class="post">
+    <h1>{{ post.title }}</h1>
+    <div class="post_text">
+        <p>{{post.ingredients|linebreaksbr}}</p>
+        <br>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+</div>
+{% endblock %}

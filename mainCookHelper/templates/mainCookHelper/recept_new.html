@@ -1,0 +1,15 @@
+{% extends 'mainCookHelper/base.html' %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <div class="forms">
+    <form method="POST" class="post-form">{% csrf_token %}
+        {% for f in form %}
+            <p><label class ="form-label" for="{{f.id_for_label}}">{{f.label}}: <br> </label>{{f}}</p>
+            <div class="form-error">{{f.errors}}</div>
+        {%endfor%}
+        <br>
+        <button type="submit">Сохранить</button>
+    </form>
+</div>
+{% endblock %}
